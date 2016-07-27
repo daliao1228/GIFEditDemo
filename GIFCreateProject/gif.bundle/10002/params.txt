@@ -1,0 +1,1 @@
+{"folderName": "鼻子","height": 240,"width": 480,"frames": 32,"looping": 1,"scaleWidth": 500,"alignX": 50,"alignY": -80,"showUtilFinish": 1,"type": "D","frameDuration": 50,"leftIndex": 0,"rightIndex": 32,"triggerType": 2}

@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2907D4281D4747E700895F72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D4271D4747E700895F72 /* main.m */; };
+		2907D42B1D4747E700895F72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D42A1D4747E700895F72 /* AppDelegate.m */; };
+		2907D4331D4747E700895F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2907D4321D4747E700895F72 /* Assets.xcassets */; };
+		2907D4361D4747E700895F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2907D4341D4747E700895F72 /* LaunchScreen.storyboard */; };
+		2907D4411D4747E700895F72 /* GIFCreateProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D4401D4747E700895F72 /* GIFCreateProjectTests.m */; };
+		2907D44C1D4747E700895F72 /* GIFCreateProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D44B1D4747E700895F72 /* GIFCreateProjectUITests.m */; };
+		2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D45A1D47486600895F72 /* PhotoChooseViewController.m */; };
+		2907D45D1D47486600895F72 /* PhotoChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2907D45B1D47486600895F72 /* PhotoChooseViewController.xib */; };
+		2907D4601D47595000895F72 /* gif.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2907D45F1D47595000895F72 /* gif.bundle */; };
+		299502391D4763B400DA0869 /* GIFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502381D4763B400DA0869 /* GIFModel.m */; };
+		2995023E1D476B4800DA0869 /* GIFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995023D1D476B4800DA0869 /* GIFView.m */; };
+		299502411D47764400DA0869 /* GIFEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502401D47764400DA0869 /* GIFEditView.m */; };
+		299502431D4855B900DA0869 /* GIFEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299502421D4855B900DA0869 /* GIFEditView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2907D43D1D4747E700895F72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2907D41B1D4747E700895F72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2907D4221D4747E700895F72;
+			remoteInfo = GIFCreateProject;
+		};
+		2907D4481D4747E700895F72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2907D41B1D4747E700895F72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2907D4221D4747E700895F72;
+			remoteInfo = GIFCreateProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2907D4231D4747E700895F72 /* GIFCreateProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFCreateProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2907D4271D4747E700895F72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2907D4291D4747E700895F72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2907D42A1D4747E700895F72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2907D4321D4747E700895F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2907D4351D4747E700895F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2907D4371D4747E700895F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2907D43C1D4747E700895F72 /* GIFCreateProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIFCreateProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2907D4401D4747E700895F72 /* GIFCreateProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFCreateProjectTests.m; sourceTree = "<group>"; };
+		2907D4421D4747E700895F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2907D4471D4747E700895F72 /* GIFCreateProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GIFCreateProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2907D44B1D4747E700895F72 /* GIFCreateProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFCreateProjectUITests.m; sourceTree = "<group>"; };
+		2907D44D1D4747E700895F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2907D4591D47486600895F72 /* PhotoChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoChooseViewController.h; sourceTree = "<group>"; };
+		2907D45A1D47486600895F72 /* PhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseViewController.m; sourceTree = "<group>"; };
+		2907D45B1D47486600895F72 /* PhotoChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoChooseViewController.xib; sourceTree = "<group>"; };
+		2907D45F1D47595000895F72 /* gif.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = gif.bundle; sourceTree = "<group>"; };
+		299502371D4763B400DA0869 /* GIFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFModel.h; sourceTree = "<group>"; };
+		299502381D4763B400DA0869 /* GIFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFModel.m; sourceTree = "<group>"; };
+		2995023A1D4766CA00DA0869 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2995023C1D476B4800DA0869 /* GIFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFView.h; sourceTree = "<group>"; };
+		2995023D1D476B4800DA0869 /* GIFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFView.m; sourceTree = "<group>"; };
+		2995023F1D47764400DA0869 /* GIFEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFEditView.h; sourceTree = "<group>"; };
+		299502401D47764400DA0869 /* GIFEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFEditView.m; sourceTree = "<group>"; };
+		299502421D4855B900DA0869 /* GIFEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFEditView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2907D4201D4747E700895F72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D4391D4747E700895F72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D4441D4747E700895F72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2907D41A1D4747E700895F72 = {
+			isa = PBXGroup;
+			children = (
+				2907D4251D4747E700895F72 /* GIFCreateProject */,
+				2907D43F1D4747E700895F72 /* GIFCreateProjectTests */,
+				2907D44A1D4747E700895F72 /* GIFCreateProjectUITests */,
+				2907D4241D4747E700895F72 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2907D4241D4747E700895F72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2907D4231D4747E700895F72 /* GIFCreateProject.app */,
+				2907D43C1D4747E700895F72 /* GIFCreateProjectTests.xctest */,
+				2907D4471D4747E700895F72 /* GIFCreateProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2907D4251D4747E700895F72 /* GIFCreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				2995023B1D476B2800DA0869 /* GIFViews */,
+				299502361D47639400DA0869 /* GIFModel */,
+				2907D4291D4747E700895F72 /* AppDelegate.h */,
+				2907D42A1D4747E700895F72 /* AppDelegate.m */,
+				2907D4591D47486600895F72 /* PhotoChooseViewController.h */,
+				2907D45A1D47486600895F72 /* PhotoChooseViewController.m */,
+				2907D45B1D47486600895F72 /* PhotoChooseViewController.xib */,
+				2907D4321D4747E700895F72 /* Assets.xcassets */,
+				2907D4341D4747E700895F72 /* LaunchScreen.storyboard */,
+				2907D4371D4747E700895F72 /* Info.plist */,
+				2907D45E1D47592700895F72 /* Resource */,
+				2907D4261D4747E700895F72 /* Supporting Files */,
+			);
+			path = GIFCreateProject;
+			sourceTree = "<group>";
+		};
+		2907D4261D4747E700895F72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2907D4271D4747E700895F72 /* main.m */,
+				2995023A1D4766CA00DA0869 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2907D43F1D4747E700895F72 /* GIFCreateProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				2907D4401D4747E700895F72 /* GIFCreateProjectTests.m */,
+				2907D4421D4747E700895F72 /* Info.plist */,
+			);
+			path = GIFCreateProjectTests;
+			sourceTree = "<group>";
+		};
+		2907D44A1D4747E700895F72 /* GIFCreateProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2907D44B1D4747E700895F72 /* GIFCreateProjectUITests.m */,
+				2907D44D1D4747E700895F72 /* Info.plist */,
+			);
+			path = GIFCreateProjectUITests;
+			sourceTree = "<group>";
+		};
+		2907D45E1D47592700895F72 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2907D45F1D47595000895F72 /* gif.bundle */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		299502361D47639400DA0869 /* GIFModel */ = {
+			isa = PBXGroup;
+			children = (
+				299502371D4763B400DA0869 /* GIFModel.h */,
+				299502381D4763B400DA0869 /* GIFModel.m */,
+			);
+			name = GIFModel;
+			sourceTree = "<group>";
+		};
+		2995023B1D476B2800DA0869 /* GIFViews */ = {
+			isa = PBXGroup;
+			children = (
+				2995023C1D476B4800DA0869 /* GIFView.h */,
+				2995023D1D476B4800DA0869 /* GIFView.m */,
+				2995023F1D47764400DA0869 /* GIFEditView.h */,
+				299502401D47764400DA0869 /* GIFEditView.m */,
+				299502421D4855B900DA0869 /* GIFEditView.xib */,
+			);
+			name = GIFViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2907D4221D4747E700895F72 /* GIFCreateProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2907D4501D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProject" */;
+			buildPhases = (
+				2907D41F1D4747E700895F72 /* Sources */,
+				2907D4201D4747E700895F72 /* Frameworks */,
+				2907D4211D4747E700895F72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GIFCreateProject;
+			productName = GIFCreateProject;
+			productReference = 2907D4231D4747E700895F72 /* GIFCreateProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2907D43B1D4747E700895F72 /* GIFCreateProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2907D4531D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProjectTests" */;
+			buildPhases = (
+				2907D4381D4747E700895F72 /* Sources */,
+				2907D4391D4747E700895F72 /* Frameworks */,
+				2907D43A1D4747E700895F72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2907D43E1D4747E700895F72 /* PBXTargetDependency */,
+			);
+			name = GIFCreateProjectTests;
+			productName = GIFCreateProjectTests;
+			productReference = 2907D43C1D4747E700895F72 /* GIFCreateProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2907D4461D4747E700895F72 /* GIFCreateProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2907D4561D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProjectUITests" */;
+			buildPhases = (
+				2907D4431D4747E700895F72 /* Sources */,
+				2907D4441D4747E700895F72 /* Frameworks */,
+				2907D4451D4747E700895F72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2907D4491D4747E700895F72 /* PBXTargetDependency */,
+			);
+			name = GIFCreateProjectUITests;
+			productName = GIFCreateProjectUITests;
+			productReference = 2907D4471D4747E700895F72 /* GIFCreateProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2907D41B1D4747E700895F72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = lsy;
+				TargetAttributes = {
+					2907D4221D4747E700895F72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UG8HAAH9Z3;
+					};
+					2907D43B1D4747E700895F72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UG8HAAH9Z3;
+						TestTargetID = 2907D4221D4747E700895F72;
+					};
+					2907D4461D4747E700895F72 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = UG8HAAH9Z3;
+						TestTargetID = 2907D4221D4747E700895F72;
+					};
+				};
+			};
+			buildConfigurationList = 2907D41E1D4747E700895F72 /* Build configuration list for PBXProject "GIFCreateProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2907D41A1D4747E700895F72;
+			productRefGroup = 2907D4241D4747E700895F72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2907D4221D4747E700895F72 /* GIFCreateProject */,
+				2907D43B1D4747E700895F72 /* GIFCreateProjectTests */,
+				2907D4461D4747E700895F72 /* GIFCreateProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2907D4211D4747E700895F72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2907D4601D47595000895F72 /* gif.bundle in Resources */,
+				299502431D4855B900DA0869 /* GIFEditView.xib in Resources */,
+				2907D4361D4747E700895F72 /* LaunchScreen.storyboard in Resources */,
+				2907D4331D4747E700895F72 /* Assets.xcassets in Resources */,
+				2907D45D1D47486600895F72 /* PhotoChooseViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D43A1D4747E700895F72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D4451D4747E700895F72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2907D41F1D4747E700895F72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299502391D4763B400DA0869 /* GIFModel.m in Sources */,
+				2907D42B1D4747E700895F72 /* AppDelegate.m in Sources */,
+				2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */,
+				299502411D47764400DA0869 /* GIFEditView.m in Sources */,
+				2907D4281D4747E700895F72 /* main.m in Sources */,
+				2995023E1D476B4800DA0869 /* GIFView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D4381D4747E700895F72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2907D4411D4747E700895F72 /* GIFCreateProjectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2907D4431D4747E700895F72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2907D44C1D4747E700895F72 /* GIFCreateProjectUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2907D43E1D4747E700895F72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2907D4221D4747E700895F72 /* GIFCreateProject */;
+			targetProxy = 2907D43D1D4747E700895F72 /* PBXContainerItemProxy */;
+		};
+		2907D4491D4747E700895F72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2907D4221D4747E700895F72 /* GIFCreateProject */;
+			targetProxy = 2907D4481D4747E700895F72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2907D4341D4747E700895F72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2907D4351D4747E700895F72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2907D44E1D4747E700895F72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2907D44F1D4747E700895F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2907D4511D4747E700895F72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GIFCreateProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2907D4521D4747E700895F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GIFCreateProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2907D4541D4747E700895F72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GIFCreateProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GIFCreateProject.app/GIFCreateProject";
+			};
+			name = Debug;
+		};
+		2907D4551D4747E700895F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GIFCreateProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GIFCreateProject.app/GIFCreateProject";
+			};
+			name = Release;
+		};
+		2907D4571D4747E700895F72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GIFCreateProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GIFCreateProject;
+			};
+			name = Debug;
+		};
+		2907D4581D4747E700895F72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GIFCreateProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lsy.GIFCreateProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GIFCreateProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2907D41E1D4747E700895F72 /* Build configuration list for PBXProject "GIFCreateProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2907D44E1D4747E700895F72 /* Debug */,
+				2907D44F1D4747E700895F72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2907D4501D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2907D4511D4747E700895F72 /* Debug */,
+				2907D4521D4747E700895F72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2907D4531D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2907D4541D4747E700895F72 /* Debug */,
+				2907D4551D4747E700895F72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2907D4561D4747E700895F72 /* Build configuration list for PBXNativeTarget "GIFCreateProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2907D4571D4747E700895F72 /* Debug */,
+				2907D4581D4747E700895F72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2907D41B1D4747E700895F72 /* Project object */;
+}
