@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) GIFModel *model;
 
++ (GIFEditView *)viewWithFrame:(CGRect )frame model:(GIFModel *)model;
+
 @end

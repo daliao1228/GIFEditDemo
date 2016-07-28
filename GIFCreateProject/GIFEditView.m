@@ -36,11 +36,16 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+}
+
+- (void)setModel:(GIFModel *)model {
+    _model = model;
     [self initGIFViews];
 }
 
 - (void)initGIFViews {
     [self.gifImageView setModels:self.model];
+    [self.gifImageView startAnimating];
 }
 
 @end

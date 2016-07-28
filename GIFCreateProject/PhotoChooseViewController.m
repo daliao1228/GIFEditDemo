@@ -8,13 +8,13 @@
 
 #import "PhotoChooseViewController.h"
 #import "GIFModel.h"
-#import "GIFView.h"
+#import "GIFEditView.h"
 
 @interface PhotoChooseViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *selectedImageView;
 @property (strong, nonatomic) UIImage *pickerImage;
-@property (strong, nonatomic) GIFView *gifView;
+@property (strong, nonatomic) GIFEditView *gifView;
 
 @end
 
@@ -41,6 +41,8 @@
         NSData *data = [configString dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary *gifConfig = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         GIFModel *model = [GIFModel makeGifModelWithDict:gifConfig];
+        self.gifView = [GIFEditView viewWithFrame:CGRectMake(100, 100, 100, 100) model:model];
+        [self.view addSubview:self.gifView];
     }
 }
 
