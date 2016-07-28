@@ -49,6 +49,9 @@
                         <constraint firstAttribute="width" constant="30" id="5cB-5J-ov5"/>
                     </constraints>
                     <state key="normal" image="delete"/>
+                    <connections>
+                        <action selector="deleteButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="q1l-C4-Qfv"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4R-fd-yZg">
                     <rect key="frame" x="70" y="0.0" width="30" height="30"/>
@@ -57,6 +60,9 @@
                         <constraint firstAttribute="height" constant="30" id="iPe-po-zYg"/>
                     </constraints>
                     <state key="normal" image="rotate"/>
+                    <connections>
+                        <action selector="rotateButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="nwq-92-Dd3"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-7d-aOq">
                     <rect key="frame" x="70" y="70" width="30" height="30"/>
@@ -65,6 +71,9 @@
                         <constraint firstAttribute="height" constant="30" id="ukm-DN-Ftr"/>
                     </constraints>
                     <state key="normal" image="scale"/>
+                    <connections>
+                        <action selector="scaleButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lQ1-gd-eey"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -94,7 +103,10 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="deleteButton" destination="MbB-5h-1tN" id="7nL-yQ-xAx"/>
                 <outlet property="gifImageView" destination="mU8-y2-n8i" id="hf5-2B-coX"/>
+                <outlet property="rotateButton" destination="W4R-fd-yZg" id="BDn-ig-jss"/>
+                <outlet property="scaleButton" destination="lbN-7d-aOq" id="OnS-0T-DPI"/>
             </connections>
             <point key="canvasLocation" x="574" y="340"/>
         </view>

@@ -12,6 +12,9 @@
 @interface GIFEditView ()
 
 @property (strong, nonatomic) IBOutlet GIFView *gifImageView;
+@property (strong, nonatomic) IBOutlet UIButton *deleteButton;
+@property (strong, nonatomic) IBOutlet UIButton *rotateButton;
+@property (strong, nonatomic) IBOutlet UIButton *scaleButton;
 
 @end
 
@@ -36,6 +39,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    [self initSomeGestures];
+}
+
+- (void)initSomeGestures {
+    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+    [self addGestureRecognizer:panRecognizer];
+    UIPinchGestureRecognizer *pinchRecogizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+    [self addGestureRecognizer:pinchRecogizer];
+}
+
+- (void)initGIFViews {
+    [self.gifImageView setModels:self.model];
+    [self.gifImageView startAnimating];
 }
 
 - (void)setModel:(GIFModel *)model {
@@ -43,9 +59,36 @@
     [self initGIFViews];
 }
 
-- (void)initGIFViews {
-    [self.gifImageView setModels:self.model];
-    [self.gifImageView startAnimating];
+#pragma -mark UIGestureRecoginzer
+- (void)handlePan:(id)sender {
+    if ([sender isKindOfClass:[UIPanGestureRecognizer class]]) {
+        UIPanGestureRecognizer *recognizer = (UIPanGestureRecognizer *)sender;
+        CGPoint translation = [recognizer translationInView:self.superview];
+        recognizer.view.center = CGPointMake(recognizer.view.center.x + translation.x, recognizer.view.center.y + translation.y);
+        [recognizer setTranslation:CGPointZero inView:self.superview];
+    }
+}
+
+- (void)handlePinch:(id)sender {
+    if ([sender isKindOfClass:[UIPinchGestureRecognizer class]]) {
+        UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
+        recognizer.view.transform = CGAffineTransformScale(recognizer.view.transform, recognizer.scale, recognizer.scale);
+        recognizer.scale = 1;
+    }
+}
+
+- (IBAction)deleteButtonTapped:(id)sender {
+    if (self.superview) {
+        [self removeFromSuperview];
+    }
+}
+
+- (IBAction)rotateButtonTapped:(id)sender {
+    
+}
+
+- (IBAction)scaleButtonTapped:(id)sender {
+    
 }
 
 @end
