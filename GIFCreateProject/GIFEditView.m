@@ -19,9 +19,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *rotateButton;
 @property (strong, nonatomic) IBOutlet UIButton *scaleButton;
 @property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
+@property (strong, nonatomic) UIPanGestureRecognizer *rotateButtonPanRecognizer;
 @property (strong, nonatomic) UIPinchGestureRecognizer *pinchRecognizer;
 @property (strong, nonatomic) UIRotationGestureRecognizer *rotationRecognizer;
 @property (assign, nonatomic) CGFloat towPointPinchDistance;
+@property (assign, nonatomic) CGPoint lastPointPosition;
 
 @end
 
@@ -58,6 +60,14 @@
         self.pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
         [self addGestureRecognizer:self.pinchRecognizer];
     }
+    if (!self.rotationRecognizer) {
+        self.rotationRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotate:)];
+        [self addGestureRecognizer:self.rotationRecognizer];
+    }
+    if (!self.rotateButtonPanRecognizer) {
+        self.rotateButtonPanRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotatePan:)];
+        [self.rotateButton addGestureRecognizer:self.rotateButtonPanRecognizer];
+    }
 }
 
 - (void)initGIFViews {
@@ -68,6 +78,16 @@
 - (void)setModel:(GIFModel *)model {
     _model = model;
     [self initGIFViews];
+}
+
+#pragma -mark OverrideMethod
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (CGRectContainsPoint(self.deleteButton.frame, point)) {
+        return self.deleteButton;
+    } else if (CGRectContainsPoint(self.scaleButton.frame, point)) {
+        return self.scaleButton;
+    }
+    return [super hitTest:point withEvent:event];
 }
 
 #pragma -mark UIGestureRecoginzers
@@ -105,10 +125,39 @@
     }
 }
 
-- (CGFloat )caculateTwoPointDistance:(CGPoint)firstPoint secondPoint:(CGPoint)secondPoint {
+- (void)handleRotate:(id)sender {
+    if(sender == self.rotationRecognizer) {
+        CGFloat rotatation = self.rotationRecognizer.rotation;
+        self.transform = CGAffineTransformRotate(self.transform, rotatation);
+        self.rotationRecognizer.rotation = 0;
+    }
+}
+
+- (void)handleRotatePan:(id)sender {
+    if (sender == self.rotateButtonPanRecognizer) {
+        CGPoint currentTouchPosition = [self.rotateButtonPanRecognizer locationInView:self.superview];
+        if (self.rotateButtonPanRecognizer.state == UIGestureRecognizerStateBegan) {
+            self.lastPointPosition = currentTouchPosition;
+        } else if (self.rotateButtonPanRecognizer.state == UIGestureRecognizerStateChanged) {
+            CGPoint center = self.center;
+            CGFloat rotation = [self angleWithPoint:center pointA:self.lastPointPosition pointB:currentTouchPosition];
+            self.lastPointPosition = currentTouchPosition;
+            self.transform = CGAffineTransformRotate(self.transform, rotation);
+        }
+    }
+}
+
+- (CGFloat)caculateTwoPointDistance:(CGPoint)firstPoint secondPoint:(CGPoint)secondPoint {
     CGFloat XDistance = (firstPoint.x - secondPoint.x) * (firstPoint.x - secondPoint.x);
     CGFloat YDistance = (firstPoint.y - secondPoint.y) * (firstPoint.y - secondPoint.y);
     return sqrt(XDistance + YDistance);
+}
+
+/**
+ * 计算从line(p0, pointA) 到 line(p0, pointB) 之间的夹角
+ */
+- (CGFloat)angleWithPoint:(CGPoint)p0 pointA:(CGPoint)pointA pointB:(CGPoint)pointB {
+    return atan2f(pointB.y - p0.y, pointB.x - p0.x) - atan2f(pointA.y - p0.y, pointA.x - p0.x);
 }
 
 - (IBAction)deleteButtonTapped:(id)sender {
