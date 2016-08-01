@@ -25,6 +25,7 @@
 @property (assign, nonatomic) CGFloat towPointPinchDistance;
 @property (assign, nonatomic) CGPoint lastPointPosition;
 @property (assign, nonatomic) CGFloat originCenterDistance;
+@property (strong, nonatomic) NSArray *array;
 
 @end
 
@@ -75,6 +76,7 @@
         self.panRecognizer.delegate = self;
         [self.rotateAndScaleButton addGestureRecognizer:self.rotateButtonPanRecognizer];
     }
+    
 }
 
 - (void)initGIFViews {

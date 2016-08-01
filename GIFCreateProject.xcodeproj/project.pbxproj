@@ -16,6 +16,7 @@
 		2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2907D45A1D47486600895F72 /* PhotoChooseViewController.m */; };
 		2907D45D1D47486600895F72 /* PhotoChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2907D45B1D47486600895F72 /* PhotoChooseViewController.xib */; };
 		2907D4601D47595000895F72 /* gif.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2907D45F1D47595000895F72 /* gif.bundle */; };
+		2921672F1D4F338F0071E071 /* GIFGenerateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2921672E1D4F338F0071E071 /* GIFGenerateManager.m */; };
 		299502391D4763B400DA0869 /* GIFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502381D4763B400DA0869 /* GIFModel.m */; };
 		2995023E1D476B4800DA0869 /* GIFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995023D1D476B4800DA0869 /* GIFView.m */; };
 		299502411D47764400DA0869 /* GIFEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502401D47764400DA0869 /* GIFEditView.m */; };
@@ -57,6 +58,8 @@
 		2907D45A1D47486600895F72 /* PhotoChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoChooseViewController.m; sourceTree = "<group>"; };
 		2907D45B1D47486600895F72 /* PhotoChooseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoChooseViewController.xib; sourceTree = "<group>"; };
 		2907D45F1D47595000895F72 /* gif.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = gif.bundle; sourceTree = "<group>"; };
+		2921672D1D4F338F0071E071 /* GIFGenerateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFGenerateManager.h; sourceTree = "<group>"; };
+		2921672E1D4F338F0071E071 /* GIFGenerateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFGenerateManager.m; sourceTree = "<group>"; };
 		299502371D4763B400DA0869 /* GIFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFModel.h; sourceTree = "<group>"; };
 		299502381D4763B400DA0869 /* GIFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFModel.m; sourceTree = "<group>"; };
 		2995023A1D4766CA00DA0869 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 		2907D4251D4747E700895F72 /* GIFCreateProject */ = {
 			isa = PBXGroup;
 			children = (
+				2921672C1D4F33720071E071 /* GIFGenerate */,
 				2995023B1D476B2800DA0869 /* GIFViews */,
 				299502361D47639400DA0869 /* GIFModel */,
 				2907D4291D4747E700895F72 /* AppDelegate.h */,
@@ -164,6 +168,15 @@
 				2907D45F1D47595000895F72 /* gif.bundle */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		2921672C1D4F33720071E071 /* GIFGenerate */ = {
+			isa = PBXGroup;
+			children = (
+				2921672D1D4F338F0071E071 /* GIFGenerateManager.h */,
+				2921672E1D4F338F0071E071 /* GIFGenerateManager.m */,
+			);
+			name = GIFGenerate;
 			sourceTree = "<group>";
 		};
 		299502361D47639400DA0869 /* GIFModel */ = {
@@ -327,6 +340,7 @@
 				2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */,
 				299502411D47764400DA0869 /* GIFEditView.m in Sources */,
 				2907D4281D4747E700895F72 /* main.m in Sources */,
+				2921672F1D4F338F0071E071 /* GIFGenerateManager.m in Sources */,
 				2995023E1D476B4800DA0869 /* GIFView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

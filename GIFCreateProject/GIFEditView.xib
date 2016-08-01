@@ -101,9 +101,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="deleteButton" destination="MbB-5h-1tN" id="7nL-yQ-xAx"/>
+                <outlet property="flipButton" destination="W4R-fd-yZg" id="prL-lX-rba"/>
                 <outlet property="gifImageView" destination="mU8-y2-n8i" id="hf5-2B-coX"/>
                 <outlet property="rotateAndScaleButton" destination="lbN-7d-aOq" id="9Ep-WO-UAn"/>
-                <outlet property="rotateButton" destination="W4R-fd-yZg" id="BDn-ig-jss"/>
             </connections>
             <point key="canvasLocation" x="574" y="340"/>
         </view>
