@@ -16,6 +16,7 @@
 @property (assign, nonatomic) NSInteger totalFrame;
 @property (assign, nonatomic) float gifHeight;
 @property (assign, nonatomic) BOOL showUntilFinish;
+@property (assign, nonatomic) BOOL isFlipped;
 @property (strong, nonatomic) NSMutableArray <UIImage *> *images;
 
 + (GIFModel *)makeGifModelWithDict:(NSDictionary *)dict;

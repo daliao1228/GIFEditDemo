@@ -16,8 +16,8 @@
 
 @property (strong, nonatomic) IBOutlet GIFView *gifImageView;
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
-@property (strong, nonatomic) IBOutlet UIButton *rotateButton;
 @property (strong, nonatomic) IBOutlet UIButton *rotateAndScaleButton;
+@property (strong, nonatomic) IBOutlet UIButton *flipButton;
 @property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (strong, nonatomic) UIPanGestureRecognizer *rotateButtonPanRecognizer;
 @property (strong, nonatomic) UIPinchGestureRecognizer *pinchRecognizer;
@@ -52,6 +52,7 @@
     [self initSomeGestures];
 }
 
+
 - (void)initSomeGestures {
     if (!self.panRecognizer) {
         self.panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
@@ -83,9 +84,20 @@
     self.originCenterDistance = [self caculateTwoPointDistance:self.center secondPoint:rightBottomPoint];
 }
 
-- (void)setModel:(GIFModel *)model {
-    _model = model;
-    [self initGIFViews];
+#pragma -mark Actions
+- (IBAction)deleteButtonTapped:(id)sender {
+    if (self.superview) {
+        [self removeFromSuperview];
+    }
+}
+
+- (IBAction)flipButtonClicked:(id)sender {
+    self.model.isFlipped = !self.model.isFlipped;
+    if (self.model.isFlipped) {
+        self.gifImageView.transform = CGAffineTransformMakeScale(-1.f, 1.f);
+    } else {
+        self.gifImageView.transform = CGAffineTransformMakeScale(1.f, 1.f);
+    }
 }
 
 #pragma -mark OverrideMethod
@@ -94,7 +106,10 @@
         return self.deleteButton;
     } else if (CGRectContainsPoint(self.rotateAndScaleButton.frame, point)) {
         return self.rotateAndScaleButton;
+    } else if (CGRectContainsPoint(self.flipButton.frame, point)) {
+        return self.flipButton;
     }
+    
     return [super hitTest:point withEvent:event];
 }
 
@@ -174,7 +189,16 @@
     return NO;
 }
 
+#pragma -mark Setter & Getter
+- (void)setModel:(GIFModel *)model {
+    _model = model;
+    [self initGIFViews];
+}
+
 #pragma -mark PrivateMethod
+/**
+ * 计算从A点到B点的距离
+ */
 - (CGFloat)caculateTwoPointDistance:(CGPoint)firstPoint secondPoint:(CGPoint)secondPoint {
     CGFloat XDistance = (firstPoint.x - secondPoint.x) * (firstPoint.x - secondPoint.x);
     CGFloat YDistance = (firstPoint.y - secondPoint.y) * (firstPoint.y - secondPoint.y);
@@ -186,16 +210,6 @@
  */
 - (CGFloat)angleWithPoint:(CGPoint)p0 pointA:(CGPoint)pointA pointB:(CGPoint)pointB {
     return atan2f(pointB.y - p0.y, pointB.x - p0.x) - atan2f(pointA.y - p0.y, pointA.x - p0.x);
-}
-
-- (IBAction)deleteButtonTapped:(id)sender {
-    if (self.superview) {
-        [self removeFromSuperview];
-    }
-}
-
-- (IBAction)scaleButtonTapped:(id)sender {
-    
 }
 
 @end

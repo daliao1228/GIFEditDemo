@@ -35,6 +35,10 @@
         model.showUntilFinish = [dict[@"showUtilFinish"] boolValue];
     }
     
+    if ([[dict allKeys] containsObject:@"isFlipped"]) {
+        model.isFlipped = [dict[@"isFlipped"] boolValue];
+    }
+    
     [model readImagesFromBundle];
     
     return model;
