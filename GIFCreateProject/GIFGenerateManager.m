@@ -25,6 +25,10 @@
     return manager;
 }
 
+- (UIImage *)combineTwoImages:(UIImage *)originImage secondImage:(UIImage *)secondImage {
+    return [self combineTwoImages:originImage secondImage:secondImage];
+}
+
 #pragma -mark Private Method
 - (NSOperationQueue *)localOperation {
     static NSOperationQueue *queue = nil;

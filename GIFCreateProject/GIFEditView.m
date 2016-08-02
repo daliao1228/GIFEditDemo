@@ -18,14 +18,22 @@
 @property (strong, nonatomic) IBOutlet UIButton *deleteButton;
 @property (strong, nonatomic) IBOutlet UIButton *rotateAndScaleButton;
 @property (strong, nonatomic) IBOutlet UIButton *flipButton;
+@property (strong, nonatomic) IBOutlet UIView *topLines;
+@property (strong, nonatomic) IBOutlet UIView *leftLines;
+@property (strong, nonatomic) IBOutlet UIView *bottomLines;
+@property (strong, nonatomic) IBOutlet UIView *rightLines;
+
 @property (strong, nonatomic) UIPanGestureRecognizer *panRecognizer;
 @property (strong, nonatomic) UIPanGestureRecognizer *rotateButtonPanRecognizer;
 @property (strong, nonatomic) UIPinchGestureRecognizer *pinchRecognizer;
 @property (strong, nonatomic) UIRotationGestureRecognizer *rotationRecognizer;
+@property (strong, nonatomic) UITapGestureRecognizer *tapRecognizer;
+@property (assign, nonatomic) BOOL isEditing;
 @property (assign, nonatomic) CGFloat towPointPinchDistance;
 @property (assign, nonatomic) CGPoint lastPointPosition;
 @property (assign, nonatomic) CGFloat originCenterDistance;
 @property (strong, nonatomic) NSArray *array;
+@property (weak, nonatomic) NSTimer *editTimer;
 
 @end
 
@@ -53,6 +61,9 @@
     [self initSomeGestures];
 }
 
+- (void)dealloc {
+    _editTimer = nil;
+}
 
 - (void)initSomeGestures {
     if (!self.panRecognizer) {
@@ -77,6 +88,11 @@
         [self.rotateAndScaleButton addGestureRecognizer:self.rotateButtonPanRecognizer];
     }
     
+    if (!self.tapRecognizer) {
+        self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+        self.tapRecognizer.delegate = self;
+        [self addGestureRecognizer:self.tapRecognizer];
+    }
 }
 
 - (void)initGIFViews {
@@ -115,13 +131,71 @@
     return [super hitTest:point withEvent:event];
 }
 
+#pragma -mark AboutTimer
+- (void)startEditTimer {
+    if ([self.editTimer isValid] && self.editTimer != nil) {
+        [self.editTimer invalidate];
+        self.editTimer = nil;
+    }
+    self.editTimer = [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(endEdit) userInfo:nil repeats:NO];
+}
+
+- (void)stopEditTimer {
+    [self.editTimer invalidate];
+    self.editTimer = nil;
+}
+
+- (void)showEditButtons {
+    self.deleteButton.hidden = NO;
+    self.flipButton.hidden = NO;
+    self.rotateAndScaleButton.hidden = NO;
+    self.topLines.hidden = NO;
+    self.leftLines.hidden = NO;
+    self.bottomLines.hidden = NO;
+    self.rightLines.hidden = NO;
+}
+
+- (void)hideEditButtons {
+    self.deleteButton.hidden = YES;
+    self.flipButton.hidden = YES;
+    self.rotateAndScaleButton.hidden = YES;
+    self.topLines.hidden = YES;
+    self.leftLines.hidden = YES;
+    self.bottomLines.hidden = YES;
+    self.rightLines.hidden = YES;
+}
+
+- (void)beginEdit {
+    if (!self.isEditing) {
+        [self showEditButtons];
+        [self startEditTimer];
+        self.isEditing = YES;
+    }
+}
+
+- (void)endEdit {
+    if (self.isEditing) {
+        self.isEditing = NO;
+        [self hideEditButtons];
+        [self stopEditTimer];
+    }
+}
+
 #pragma -mark UIGestureRecoginzers
+
+- (void)handleTap:(id)sender {
+    if (sender == self.tapRecognizer) {
+        [self beginEdit];
+    }
+}
+
 - (void)handlePan:(id)sender {
     if (sender == self.panRecognizer) {
         CGPoint translation = [self.panRecognizer translationInView:self.superview];
         self.panRecognizer.view.center = CGPointMake(self.panRecognizer.view.center.x + translation.x,
                                                      self.panRecognizer.view.center.y + translation.y);
         [self.panRecognizer setTranslation:CGPointZero inView:self.superview];
+        [self beginEdit];
     }
 }
 
@@ -147,6 +221,7 @@
             bounds.size.height = 100 * finalScale;
             self.bounds = bounds;
         }
+        [self beginEdit];
     }
 }
 
@@ -155,6 +230,7 @@
         CGFloat rotatation = self.rotationRecognizer.rotation;
         self.transform = CGAffineTransformRotate(self.transform, rotatation);
         self.rotationRecognizer.rotation = 0;
+        [self beginEdit];
     }
 }
 
@@ -178,6 +254,7 @@
             bounds.size.height = 100 * scale;
             
             self.bounds = bounds;
+            [self beginEdit];
         }
     }
 }

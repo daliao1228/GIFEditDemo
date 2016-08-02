@@ -14,35 +14,35 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mU8-y2-n8i" customClass="GIFView">
                     <rect key="frame" x="10" y="10" width="80" height="80"/>
                 </imageView>
-                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-wD-3Bg">
+                <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gv-wD-3Bg">
                     <rect key="frame" x="10" y="10" width="80" height="1"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="inB-Kx-j47"/>
                     </constraints>
                 </view>
-                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-WP-enH">
+                <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cB-WP-enH">
                     <rect key="frame" x="10" y="10" width="1" height="80"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="Spe-oe-hyC"/>
                     </constraints>
                 </view>
-                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liY-ds-v8o">
+                <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="liY-ds-v8o">
                     <rect key="frame" x="10" y="89" width="80" height="1"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Is6-xg-ffW"/>
                     </constraints>
                 </view>
-                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-t7-OC5">
+                <view hidden="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-t7-OC5">
                     <rect key="frame" x="89" y="10" width="1" height="80"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="nKX-mA-bzD"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-5h-1tN">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-5h-1tN">
                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="4nk-tD-AkW"/>
@@ -53,7 +53,7 @@
                         <action selector="deleteButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="q1l-C4-Qfv"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4R-fd-yZg">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4R-fd-yZg">
                     <rect key="frame" x="70" y="0.0" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="PZD-Hm-MJU"/>
@@ -64,7 +64,7 @@
                         <action selector="rotateButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="nwq-92-Dd3"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-7d-aOq">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbN-7d-aOq">
                     <rect key="frame" x="70" y="70" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="DWV-ye-1fO"/>
@@ -100,10 +100,14 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomLines" destination="liY-ds-v8o" id="gym-f2-dUn"/>
                 <outlet property="deleteButton" destination="MbB-5h-1tN" id="7nL-yQ-xAx"/>
                 <outlet property="flipButton" destination="W4R-fd-yZg" id="prL-lX-rba"/>
                 <outlet property="gifImageView" destination="mU8-y2-n8i" id="hf5-2B-coX"/>
+                <outlet property="leftLines" destination="8cB-WP-enH" id="DwQ-Fp-oom"/>
+                <outlet property="rightLines" destination="GIw-t7-OC5" id="K87-dv-EMD"/>
                 <outlet property="rotateAndScaleButton" destination="lbN-7d-aOq" id="9Ep-WO-UAn"/>
+                <outlet property="topLines" destination="6Gv-wD-3Bg" id="TGK-TF-xqR"/>
             </connections>
             <point key="canvasLocation" x="574" y="340"/>
         </view>
