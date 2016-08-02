@@ -93,6 +93,7 @@
         self.tapRecognizer.delegate = self;
         [self addGestureRecognizer:self.tapRecognizer];
     }
+    
 }
 
 - (void)initGIFViews {

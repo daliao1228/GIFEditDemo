@@ -21,6 +21,7 @@
 		2995023E1D476B4800DA0869 /* GIFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2995023D1D476B4800DA0869 /* GIFView.m */; };
 		299502411D47764400DA0869 /* GIFEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502401D47764400DA0869 /* GIFEditView.m */; };
 		299502431D4855B900DA0869 /* GIFEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299502421D4855B900DA0869 /* GIFEditView.xib */; };
+		29B7B2A51D5086C1003CF8B2 /* GIFPasterPasteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B7B2A41D5086C1003CF8B2 /* GIFPasterPasteModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		2995023F1D47764400DA0869 /* GIFEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFEditView.h; sourceTree = "<group>"; };
 		299502401D47764400DA0869 /* GIFEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFEditView.m; sourceTree = "<group>"; };
 		299502421D4855B900DA0869 /* GIFEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFEditView.xib; sourceTree = "<group>"; };
+		29B7B2A31D5086C1003CF8B2 /* GIFPasterPasteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFPasterPasteModel.h; sourceTree = "<group>"; };
+		29B7B2A41D5086C1003CF8B2 /* GIFPasterPasteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFPasterPasteModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 			children = (
 				299502371D4763B400DA0869 /* GIFModel.h */,
 				299502381D4763B400DA0869 /* GIFModel.m */,
+				29B7B2A31D5086C1003CF8B2 /* GIFPasterPasteModel.h */,
+				29B7B2A41D5086C1003CF8B2 /* GIFPasterPasteModel.m */,
 			);
 			name = GIFModel;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				299502391D4763B400DA0869 /* GIFModel.m in Sources */,
 				2907D42B1D4747E700895F72 /* AppDelegate.m in Sources */,
 				2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */,
+				29B7B2A51D5086C1003CF8B2 /* GIFPasterPasteModel.m in Sources */,
 				299502411D47764400DA0869 /* GIFEditView.m in Sources */,
 				2907D4281D4747E700895F72 /* main.m in Sources */,
 				2921672F1D4F338F0071E071 /* GIFGenerateManager.m in Sources */,
