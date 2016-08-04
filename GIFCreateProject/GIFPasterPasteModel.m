@@ -10,6 +10,19 @@
 
 @implementation GIFPasterPasteModel
 
-
++ (GIFPasterPasteModel *)generateModel:(CGPoint)center
+                                height:(CGFloat)height
+                                 width:(CGFloat)width
+                           imageArrays:(NSArray *)imageArrays
+                            imageCount:(NSInteger)imageCount {
+    
+    GIFPasterPasteModel *model = [[GIFPasterPasteModel alloc] init];
+    model.center = center;
+    model.height = height;
+    model.width = width;
+    model.imageArrays = imageArrays;
+    model.imageCount = imageCount;
+    return model;
+}
 
 @end

@@ -56,6 +56,15 @@
     return view;
 }
 
+- (GIFPasterPasteModel *)generateGIFModel {
+    GIFPasterPasteModel *model = [GIFPasterPasteModel generateModel:self.center
+                                                             height:self.bounds.size.height
+                                                              width:self.bounds.size.width
+                                                        imageArrays:[self.array copy]
+                                                         imageCount:self.array.count];
+    return model;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self initSomeGestures];

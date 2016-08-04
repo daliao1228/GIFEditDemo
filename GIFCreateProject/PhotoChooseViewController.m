@@ -46,6 +46,14 @@
     }
 }
 
+- (IBAction)saveButtonTapped:(id)sender {
+    if (self.pickerImage == nil) {
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"请选择要处理的图片" preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:controller animated:YES completion:nil];
+        return;
+    }
+    GIFPasterPasteModel *model = [self.gifView generateGIFModel];
+}
 
 #pragma -mark UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

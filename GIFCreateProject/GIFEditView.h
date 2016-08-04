@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "GIFModel.h"
+#import "GIFPasterPasteModel.h"
 
 @interface GIFEditView : UIView
 
 @property (strong, nonatomic) GIFModel *model;
 
 + (GIFEditView *)viewWithFrame:(CGRect )frame model:(GIFModel *)model;
+
+- (GIFPasterPasteModel *)generateGIFModel;
 
 @end

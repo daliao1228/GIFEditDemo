@@ -31,14 +31,25 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQN-2l-fFL">
-                    <rect key="frame" x="110" y="496" width="99" height="30"/>
+                    <rect key="frame" x="28" y="493" width="99" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="99" id="Ifd-bw-0PX"/>
                         <constraint firstAttribute="height" constant="30" id="RZt-es-zhn"/>
                     </constraints>
-                    <state key="normal" title="添加gif"/>
+                    <state key="normal" title="添加GIF"/>
                     <connections>
                         <action selector="addGifButtonTapped:" destination="-1" eventType="touchUpInside" id="RGY-Fi-pPB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-f3-AU9">
+                    <rect key="frame" x="184" y="493" width="99" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="V56-kk-mAa"/>
+                        <constraint firstAttribute="width" constant="99" id="mSN-wJ-Jcd"/>
+                    </constraints>
+                    <state key="normal" title="保存GIF"/>
+                    <connections>
+                        <action selector="saveButtonTapped:" destination="-1" eventType="touchUpInside" id="5cy-ge-YAt"/>
                     </connections>
                 </button>
             </subviews>
@@ -46,13 +57,15 @@
             <constraints>
                 <constraint firstItem="btz-mX-4wG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2xt-c2-ieV"/>
                 <constraint firstItem="btz-mX-4wG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="95S-Re-nqI"/>
-                <constraint firstItem="uQN-2l-fFL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KIf-wd-q2v"/>
+                <constraint firstAttribute="trailing" secondItem="XnC-f3-AU9" secondAttribute="trailing" constant="37" id="JDK-Ac-4pl"/>
+                <constraint firstItem="uQN-2l-fFL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-82.5" id="KIf-wd-q2v"/>
                 <constraint firstAttribute="trailing" secondItem="btz-mX-4wG" secondAttribute="trailing" id="OhJ-fE-rth"/>
-                <constraint firstAttribute="bottom" secondItem="uQN-2l-fFL" secondAttribute="bottom" constant="42" id="RiK-S1-LCh"/>
+                <constraint firstAttribute="bottom" secondItem="uQN-2l-fFL" secondAttribute="bottom" constant="45" id="RiK-S1-LCh"/>
                 <constraint firstItem="btz-mX-4wG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TYr-Oj-98D"/>
                 <constraint firstItem="bQN-s7-dmd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tqp-hL-oEx"/>
                 <constraint firstItem="btz-mX-4wG" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cVb-hR-ieP"/>
                 <constraint firstAttribute="bottom" secondItem="btz-mX-4wG" secondAttribute="bottom" id="gsk-sV-6Ay"/>
+                <constraint firstAttribute="bottom" secondItem="XnC-f3-AU9" secondAttribute="bottom" constant="45" id="ljd-XR-qYx"/>
                 <constraint firstItem="bQN-s7-dmd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zhK-dD-Tpg"/>
             </constraints>
             <point key="canvasLocation" x="600" y="497"/>

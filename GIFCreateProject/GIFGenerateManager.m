@@ -7,6 +7,7 @@
 //
 
 #import "GIFGenerateManager.h"
+#import "GIFPasterPasteModel.h"
 
 @interface GIFGenerateManager ()
 
@@ -25,8 +26,8 @@
     return manager;
 }
 
-- (UIImage *)combineTwoImages:(UIImage *)originImage secondImage:(UIImage *)secondImage {
-    return [self combineTwoImages:originImage secondImage:secondImage];
+- (UIImage *)combineTwoImages:(UIImage *)originImage secondImage:(UIImage *)secondImage options:(GIFPasterPasteModel *)model {
+    return [self combineTwoImage:originImage secondImage:secondImage options:model];
 }
 
 #pragma -mark Private Method
@@ -40,11 +41,11 @@
     return queue;
 }
 
-- (UIImage *)combineTwoImage:(UIImage *)firstImage secondImage:(UIImage *)secondImage {
+- (UIImage *)combineTwoImage:(UIImage *)firstImage secondImage:(UIImage *)secondImage options:(GIFPasterPasteModel *)model {
     CGSize size = firstImage.size;
     UIGraphicsBeginImageContext(size);
     [firstImage drawInRect:CGRectMake(0, 0, size.width, size.height)];
-    [secondImage drawInRect:CGRectMake(100, 100, 100, 100)];
+    [secondImage drawInRect:CGRectMake(model.center.x, model.center.y, model.width, model.height)];
     UIImage *combineImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return combineImage;
