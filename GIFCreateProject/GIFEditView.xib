@@ -73,7 +73,7 @@
                     <state key="normal" image="scale"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="liY-ds-v8o" secondAttribute="trailing" constant="10" id="0rk-i6-lrv"/>
                 <constraint firstAttribute="trailing" secondItem="mU8-y2-n8i" secondAttribute="trailing" constant="10" id="55C-TK-KzR"/>

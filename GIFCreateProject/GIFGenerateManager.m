@@ -7,7 +7,6 @@
 //
 
 #import "GIFGenerateManager.h"
-#import "GIFPasterPasteModel.h"
 
 @interface GIFGenerateManager ()
 
@@ -17,7 +16,7 @@
 
 @implementation GIFGenerateManager
 
-- (GIFGenerateManager *)shareInstance {
++ (GIFGenerateManager *)shareInstance {
     static GIFGenerateManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

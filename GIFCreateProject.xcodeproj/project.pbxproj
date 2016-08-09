@@ -22,6 +22,7 @@
 		299502411D47764400DA0869 /* GIFEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 299502401D47764400DA0869 /* GIFEditView.m */; };
 		299502431D4855B900DA0869 /* GIFEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299502421D4855B900DA0869 /* GIFEditView.xib */; };
 		29B7B2A51D5086C1003CF8B2 /* GIFPasterPasteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B7B2A41D5086C1003CF8B2 /* GIFPasterPasteModel.m */; };
+		29D4FDEA1D59D54B000605F5 /* UIAlertController+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D4FDE91D59D54B000605F5 /* UIAlertController+Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		299502421D4855B900DA0869 /* GIFEditView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GIFEditView.xib; sourceTree = "<group>"; };
 		29B7B2A31D5086C1003CF8B2 /* GIFPasterPasteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIFPasterPasteModel.h; sourceTree = "<group>"; };
 		29B7B2A41D5086C1003CF8B2 /* GIFPasterPasteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIFPasterPasteModel.m; sourceTree = "<group>"; };
+		29D4FDE81D59D54B000605F5 /* UIAlertController+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Block.h"; sourceTree = "<group>"; };
+		29D4FDE91D59D54B000605F5 /* UIAlertController+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Block.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		2907D4251D4747E700895F72 /* GIFCreateProject */ = {
 			isa = PBXGroup;
 			children = (
+				29D4FDE71D59D500000605F5 /* AlertView */,
 				2921672C1D4F33720071E071 /* GIFGenerate */,
 				2995023B1D476B2800DA0869 /* GIFViews */,
 				299502361D47639400DA0869 /* GIFModel */,
@@ -203,6 +207,15 @@
 				299502421D4855B900DA0869 /* GIFEditView.xib */,
 			);
 			name = GIFViews;
+			sourceTree = "<group>";
+		};
+		29D4FDE71D59D500000605F5 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				29D4FDE81D59D54B000605F5 /* UIAlertController+Block.h */,
+				29D4FDE91D59D54B000605F5 /* UIAlertController+Block.m */,
+			);
+			name = AlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +355,7 @@
 			files = (
 				299502391D4763B400DA0869 /* GIFModel.m in Sources */,
 				2907D42B1D4747E700895F72 /* AppDelegate.m in Sources */,
+				29D4FDEA1D59D54B000605F5 /* UIAlertController+Block.m in Sources */,
 				2907D45C1D47486600895F72 /* PhotoChooseViewController.m in Sources */,
 				29B7B2A51D5086C1003CF8B2 /* GIFPasterPasteModel.m in Sources */,
 				299502411D47764400DA0869 /* GIFEditView.m in Sources */,

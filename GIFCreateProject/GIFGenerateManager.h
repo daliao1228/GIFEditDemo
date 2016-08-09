@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "GIFPasterPasteModel.h"
 
 @interface GIFGenerateManager : NSObject
+
++ (GIFGenerateManager *)shareInstance;
+
+- (UIImage *)combineTwoImages:(UIImage *)originImage secondImage:(UIImage *)secondImage options:(GIFPasterPasteModel *)model;
 
 @end

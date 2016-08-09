@@ -32,7 +32,6 @@
 @property (assign, nonatomic) CGFloat towPointPinchDistance;
 @property (assign, nonatomic) CGPoint lastPointPosition;
 @property (assign, nonatomic) CGFloat originCenterDistance;
-@property (strong, nonatomic) NSArray *array;
 @property (weak, nonatomic) NSTimer *editTimer;
 
 @end
@@ -60,8 +59,8 @@
     GIFPasterPasteModel *model = [GIFPasterPasteModel generateModel:self.center
                                                              height:self.bounds.size.height
                                                               width:self.bounds.size.width
-                                                        imageArrays:[self.array copy]
-                                                         imageCount:self.array.count];
+                                                        imageArrays:[self.model.images copy]
+                                                         imageCount:self.model.images.count];
     return model;
 }
 

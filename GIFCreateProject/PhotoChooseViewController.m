@@ -9,6 +9,8 @@
 #import "PhotoChooseViewController.h"
 #import "GIFModel.h"
 #import "GIFEditView.h"
+#import "UIAlertController+Block.h"
+#import "GIFGenerateManager.h"
 
 @interface PhotoChooseViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -48,11 +50,21 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     if (self.pickerImage == nil) {
-        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"提示" message:@"请选择要处理的图片" preferredStyle:UIAlertControllerStyleAlert];
-        [self presentViewController:controller animated:YES completion:nil];
+       [UIAlertController showAlertViewInViewController:self
+                                              WithTitle:@"提示"
+                                                message:@"请选择图片"
+                                         preferredStyle:UIAlertControllerStyleAlert
+                                        completionBlock:^(UIAlertController *controller, UIAlertAction *action, NSInteger ButtonIndex) {
+                                                                              
+                                        } cancelButtonTitle:@"知道了"
+                                 destructiveButtonTitle:nil otherButtonTitles:nil];
         return;
     }
     GIFPasterPasteModel *model = [self.gifView generateGIFModel];
+    UIImage *originImage = [self.pickerImage copy];
+    UIImage *newImage = [[GIFGenerateManager shareInstance] combineTwoImages:originImage secondImage:model.imageArrays[0] options:model];
+    self.selectedImageView.image = newImage;
+    [self.gifView removeFromSuperview];
 }
 
 #pragma -mark UIImagePickerControllerDelegate
